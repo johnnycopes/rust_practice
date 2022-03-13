@@ -1,3 +1,5 @@
+// Convert temperatures between Fahrenheit and Celsius.
+
 use std::io;
 
 fn main() {
