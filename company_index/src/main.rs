@@ -6,17 +6,25 @@ use std::io;
 
 fn main() {
     println!("Welcome to the Globex Corporation employee index");
-    println!("================================================");
+    println!("================================================\n");
 
-    println!("Please input a command");
+    println!("Please input a command:");
 
-    let mut command = String::new();
+    let mut input = String::new();
 
     io::stdin()
-        .read_line(&mut command)
+        .read_line(&mut input)
         .expect("Failed to read line");
 
-    let input = command.trim();
+    let words = input
+        .trim()
+        .split(' ')
+        .collect::<Vec<_>>();
 
-    println!("{}", input);
+    println!("{:?}", words);
+
+    for word in words {
+        println!("{}", word);
+    }
+
 }
